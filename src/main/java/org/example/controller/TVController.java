@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
 @WebServlet("/info")
 public class TVController extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         Client client = ClientBuilder.newClient();
         try {
             URI uri = new URI("http://localhost:8080/REST/tv/send");
